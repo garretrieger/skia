@@ -25,8 +25,8 @@ if (skia_use_system_harfbuzz) {
     defines = [
       #"HAVE_ICU",
       #"HAVE_ICU_BUILTIN",
-      "HAVE_INTEL_ATOMIC_PRIMITIVES",
       "HAVE_OT",
+      "HAVE_CONFIG_OVERRIDE_H",
     ]
     public = [
       "$_src/hb-blob.h",
@@ -52,6 +52,7 @@ if (skia_use_system_harfbuzz) {
       "$_src/hb.h",
     ]
     sources = [
+      "config-override.h",
       "$_src/hb-aat-fdsc-table.hh",
       "$_src/hb-aat-layout-ankr-table.hh",
       "$_src/hb-aat-layout-bsln-table.hh",
@@ -183,9 +184,10 @@ if (skia_use_system_harfbuzz) {
       "$_src/hb-ot-shape-complex-myanmar-machine.hh",
       "$_src/hb-ot-shape-complex-myanmar.cc",
       "$_src/hb-ot-shape-complex-myanmar.hh",
+      "$_src/hb-ot-shape-complex-syllabic.cc",
+      "$_src/hb-ot-shape-complex-syllabic.hh",
       "$_src/hb-ot-shape-complex-thai.cc",
       "$_src/hb-ot-shape-complex-use-machine.hh",
-      "$_src/hb-ot-shape-complex-use-table.cc",
       "$_src/hb-ot-shape-complex-use.cc",
       "$_src/hb-ot-shape-complex-use.hh",
       "$_src/hb-ot-shape-complex-vowel-constraints.cc",
